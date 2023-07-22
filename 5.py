@@ -9,7 +9,7 @@ receiverAdress=input("Please enter your email address")
 emailPassword= "epztokmkcgkdmstw"
 
 verf_code=code_generator.generate_code()
-subject="인증 메일입니다. {verf_code}"
+subject="인증 메일. {verf_code}"
 
     
 
