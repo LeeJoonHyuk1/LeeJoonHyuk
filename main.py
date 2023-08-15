@@ -44,7 +44,7 @@ def fetch_all_bank_total_index():
 
 
 
-#가상의 거래를 시행하는 함수. all_bank 리스트에 한해 적용시키며 각 은행들의 거래값을 0으로 설정한다.  
+#가상의 거래를 시행하는 함수. all_bank 리스트에 한해 적용시키며 각 은행들의 거래값을 0으로 설정한다.   
 def massive_fake_trxs():
     all_bank = {
         1: "KB",
