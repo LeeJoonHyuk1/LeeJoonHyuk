@@ -17,6 +17,11 @@ cursorObject.execute("use Toss")
 
 # def fake_massive_transfer():
 
+
+
+# 먼저 all_bank 리스트에 있는 은행들의 인덱스에 함수를 적용시킨다. 그리고 all_bank 리스트 안에 있는 모든 인자들의 갯수를 센 후 각 은행들의 은행 이름, 잔액, 아이디에 해당되는 행렬 값을 산출한다.
+# 이후 이 코드는 all_bank라는 리스트에 저장된 은행 이름에 따라 각 은행 테이블에서 행의 수를 세고, 각 행의 잔액을 10,000,000으로 업데이트하는 작업을 수행한다. 이러한 작업이 완료되면 finish update
+#   all balance라는 문장이 산출되게 한다
 def fetch_all_bank_total_index():
     all_bank = {
         1: "KB",
@@ -34,9 +39,12 @@ def fetch_all_bank_total_index():
         for j in range(1, result[0][0] + 1):
             update_balance(all_bank[i], 10000000, j)
     print("finish update all balance")
-# 먼저 all_bank 리스트에 있는 은행들의 인덱스에 함수를 적용시킨다. 그리고 all_bank 리스트 안에 있는 모든 인자들의 갯수를 센 후 각 은행들의 은행 이름, 잔액, 아이디에 해당되는 행렬 값을 산출한다.
-# 이후 이 코드는 all_bank라는 리스트에 저장된 은행 이름에 따라 각 은행 테이블에서 행의 수를 세고, 각 행의 잔액을 10,000,000으로 업데이트하는 작업을 수행한다. 이러한 작업이 완료되면 finish update
-#   all balance라는 문장이 산출되게 한다
+
+
+
+
+
+
 
 def massive_fake_trxs():
     all_bank = {
