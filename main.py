@@ -44,7 +44,8 @@ def fetch_all_bank_total_index():
 
 
 
-#가상의 거래를 시행하는 함수. all_bank 리스트에 한해 적용시키며 각 은행들의 거래값을 0으로 설정한다.   
+#가상의 거래를 시행하는 함수. all_bank 리스트에 한해 적용시키며 각 은행들의 거래값을 0으로 설정한다. 그리고 all_bank 리스트 안에 있는 각 은행들의 거래 내역 수와
+#그 결과에 있어서 첫 번째에 해당하는 값을 특정 은행의 값으로 설정한다. 
 def massive_fake_trxs():
     all_bank = {
         1: "KB",
@@ -59,6 +60,8 @@ def massive_fake_trxs():
         cursorObject.execute(sql)
         result = cursorObject.fetchall()
         total_bank_records[all_bank[i]] = result[0][0]
+    
+
     for i in range(10000):
         amount = random.randint(1000, 100000)  # 송금 가격 설정
         sender_bank_index = random.randint(1, 5)  # all_bank 에서 은행을 가져오기 위해 랜덤 숫자 생성
